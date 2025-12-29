@@ -4,7 +4,7 @@ import './Game.css';
 export default function Game() {
   const size = 3;
   const players = ['X', 'O'];
-  const [board, setBoard]: [string[], Function] = useState(newBoard());
+  const [board, setBoard]: [string[], React.Dispatch<React.SetStateAction<string[]>>] = useState(newBoard());
 
   const [currentPlayer, setCurrentPlayer] = useState(0);
   const [warning, setWarning] = useState('');
