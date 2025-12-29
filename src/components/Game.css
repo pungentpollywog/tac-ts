@@ -1,0 +1,17 @@
+
+.board {
+  background-color: azure;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: fit-content;
+}
+
+button {
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  min-width: 3px;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
