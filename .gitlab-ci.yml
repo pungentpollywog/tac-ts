@@ -23,7 +23,7 @@ test app:
     - npm run coverage
 
 check code quality:
-  state: quality
+  stage: quality
   image:
     name: sonarsource/sonar-scanner-cli:latest
   variables:
