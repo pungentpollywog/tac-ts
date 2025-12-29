@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,4 +10,13 @@ export default defineConfig({
       },
     }),
   ],
-})
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.js',
+  },
+  ssr: {
+    // ensure react-fontawesome is not externalized to Node at runtime
+    noExternal: ['@fortawesome/react-fontawesome'],
+  },
+});
